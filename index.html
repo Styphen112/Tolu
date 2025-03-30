@@ -23,7 +23,7 @@
             font-family: 'Arial', sans-serif;
             color: #fff;
             text-shadow: 0 0 10px #ff0, 0 0 20px #ff0;
-            animation: glow 1.5s ease-in-out infinite alternate;
+            animation: glow 1.5s ease-in-out infinite alternate, shake 2s infinite;
         }
         
         h2 {
@@ -38,6 +38,11 @@
         @keyframes glow {
             0% { text-shadow: 0 0 10px #ff0, 0 0 20px #ff0; }
             100% { text-shadow: 0 0 20px #ff0, 0 0 40px #ff0; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
         }
 
         .balloon {
